@@ -3,7 +3,7 @@ import subprocess
 
 def scan(target):
     scan_result = subprocess.run(
-        ["/home/mmorgan/bin/sslscan", target],
+        ["docker", "run", "--rm", "sslscan", "--no-colour", target],
         stdout=subprocess.PIPE,
         stderr=subprocess.STDOUT,
         universal_newlines=True
