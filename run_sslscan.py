@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 import subprocess
 
+
 def scan(target):
     scan_result = subprocess.run(
         ["docker", "run", "--rm", "sslscan", "--no-colour", target],
