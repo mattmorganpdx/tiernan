@@ -1,0 +1,13 @@
+FROM sslscan:latest
+
+RUN \
+    apk add python3 && \
+    pip3 install flask && \
+    pip3 install ansi2html && \
+    mkdir /entry
+
+ADD run_sslscan.py /entry
+ADD tiernan.py /entry
+
+WORKDIR /entry
+ENTRYPOINT /entry/tiernan.py
