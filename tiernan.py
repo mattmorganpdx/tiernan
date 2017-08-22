@@ -11,7 +11,7 @@ ansi_converter = Ansi2HTMLConverter()
 def get_scan():
     request_form = """
     <form action="/" method="post">
-    Site to scan: <input type="text" name="target_site"><br>
+    Site to scan: <input type="text" name="target_site" size="50"><br>
     <input type="submit" value="Submit">
     </form>
 
