@@ -2,10 +2,12 @@
 from run_sslscan import scan
 from flask import Flask, request, Response
 from ansi2html import Ansi2HTMLConverter
+from werkzeug.serving import WSGIRequestHandler
 
 app = Flask(__name__)
 ansi_converter = Ansi2HTMLConverter()
 
+WSGIRequestHandler.protocol_version = "HTTP/1.1"
 
 @app.route("/", methods=['GET'])
 def get_scan():
