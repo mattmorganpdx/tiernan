@@ -2,7 +2,7 @@ FROM sslscan:latest
 
 RUN \
     apk add python3 && \
-    pip3 install flask && \
+    pip3 install cherrypy && \
     pip3 install ansi2html && \
     mkdir /entry
 
