@@ -6,6 +6,7 @@ from ansi2html import Ansi2HTMLConverter
 ansi_converter = Ansi2HTMLConverter()
 cherrypy.config.update({'server.socket_host': '0.0.0.0'})
 
+
 class Tiernan(object):
     @cherrypy.expose
     def index(self):
