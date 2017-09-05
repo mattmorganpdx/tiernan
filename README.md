@@ -1,5 +1,5 @@
 # tiernan
-python flask ssl scanner using sslscan
+python cherrypy ssl scanner using sslscan
 
 - Build alpine sslscan docker container:
 
